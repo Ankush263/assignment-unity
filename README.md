@@ -42,3 +42,9 @@ POST /api/product
 POST /api/seller/create-catalog
 GET /api/seller/orders
 ```
+
+## Deployed url
+
+```sh
+https://assignment-unity.onrender.com
+```
