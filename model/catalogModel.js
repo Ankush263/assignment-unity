@@ -27,6 +27,15 @@ const catalogSchema = new mongoose.Schema(
 	}
 );
 
+catalogSchema.pre(/^find/, function (next) {
+	this.populate({
+		path: 'items.product',
+		select: 'name price',
+	});
+
+	next();
+});
+
 const Catalog = mongoose.model('Catalog', catalogSchema);
 
 module.exports = Catalog;
